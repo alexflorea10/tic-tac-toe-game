@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  background: linear-gradient(to top right, #bdcdd6, #6096b4, #bdcdd6);
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.form {
+  width: 50rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  margin: 10% auto;
+}
+.input {
+  text-align: center;
+  background-color: #bdcdd6;
+  padding: 3rem;
+  border: none;
+  border-radius: 48px;
+  font-size: 2.4rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.input:hover {
+  background-color: #cfdfe8;
+  color: #20262e;
+}
+
+.btn-submit {
+  background-color: #bdcdd6;
+  color: #20262e;
+  width: 50%;
+  padding: 3rem;
+  font-size: 2.4rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  border-radius: 48px;
+  border: none;
+}
+
+.btn-submit:hover {
+  background-color: #cfdfe8;
+  cursor: pointer;
+}
+
+.info-box {
+  width: 40rem;
+  height: 20rem;
+  border: 1rem solid #20262e;
+  border-radius: 48px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-box span {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: #20262e;
+}
+
+.board {
+  width: 63rem;
+  height: 63rem;
+  background-color: #20262e;
+  border-radius: 48px;
+
+  margin: 7% auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.box {
+  background-color: #bdcdd6;
+  position: relative;
+
+  transition: all 0.4s;
+}
+
+.box:hover {
+  background-color: #6096b4;
+  cursor: pointer;
+}
+
+.box--1 {
+  border-radius: 40px 0 0 0;
+}
+
+.box--3 {
+  border-radius: 0 40px 0 0;
+}
+
+.box--7 {
+  border-radius: 0 0 0 40px;
+}
+
+.box--9 {
+  border-radius: 0 0 40px 0;
+}
+
+.x-marked::before {
+  content: "X";
+  font-size: 10rem;
+  font-weight: 800;
+  color: #20262e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.o-marked::before {
+  content: "0";
+  font-size: 10rem;
+  font-weight: 800;
+  color: #20262e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.winner {
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}

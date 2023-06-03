@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+
+    <link href="style.css" rel="stylesheet" />
+    <link href="queries.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <input
+        type="text"
+        class="input player-1-input"
+        placeholder="First player"
+      />
+      <input
+        type="text"
+        class="input player-2-input"
+        placeholder="Second player"
+      />
+      <button class="btn-submit">SUBMIT</button>
+    </div>
+    <div class="game hidden">
+      <div class="info-box">
+        <div><span class="player-1-text"></span><span> - X</span></div>
+        <div><span class="player-2-text"></span><span> - 0</span></div>
+      </div>
+      <div class="board">
+        <div class="box box--1"></div>
+        <div class="box box--2"></div>
+        <div class="box box--3"></div>
+        <div class="box box--4"></div>
+        <div class="box box--5"></div>
+        <div class="box box--6"></div>
+        <div class="box box--7"></div>
+        <div class="box box--8"></div>
+        <div class="box box--9"></div>
+      </div>
+    </div>
+    <h1 class="winner"></h1>
+    <script src="script.js"></script>
+  </body>
+</html>
